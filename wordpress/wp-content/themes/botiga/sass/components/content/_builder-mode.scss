@@ -1,0 +1,44 @@
+.botiga-page-builder-mode {
+	.content-wrapper {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.site-main {
+		padding: 0 !important;
+
+		& > .hentry {
+			margin: 0;
+		}
+	}
+
+	.entry-content {
+		& > * {
+			max-width: calc( 1140px - 30px );
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		& > .alignfull {
+			max-width: 100%;
+		}
+
+		& > .alignwide {
+			max-width: 1300px;
+		}
+
+		& > p {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+	}
+
+	@media(max-width: 1140px) {
+		ul.wc-block-grid__products,
+		ul.products,
+		.wp-block-columns {
+			padding: 0 15px;
+		}
+	}
+}

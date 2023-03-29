@@ -1,0 +1,27 @@
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	overflow-x: hidden;
+}
+.ws-svg-icon {
+	svg {
+		&:not(.stroke-based) {
+			fill: $color__primary;
+		}
+		&.stroke-based {
+			stroke: $color__primary;
+		}
+	}
+
+	.back-to-top & {
+		svg {
+			fill: none;
+		}
+	}
+}
+
+.search-submit {
+	.ws-svg-icon {
+		width: 24px;
+		height: 24px;
+	}	
+}

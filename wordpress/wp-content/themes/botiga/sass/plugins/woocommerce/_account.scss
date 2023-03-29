@@ -1,0 +1,166 @@
+.woocommerce-account {
+
+	.woocommerce-notices-wrapper {
+		margin-bottom: 20px;
+	}
+
+	#customer_login {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+
+		.col-1,
+		.col-2 {
+			flex: 0 0 50%;
+    		max-width: 50%;
+
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+
+		.col-2 {
+			margin-left: -1px;
+		}
+
+	}
+	.woocommerce-form-login,
+	.woocommerce-form-register {
+		border: 1px solid #ebebeb;
+		padding: 60px;
+		min-height: 503px;
+
+		input[type="password"],
+		input[type="text"],
+		input[type="email"] {
+			width: 100%;
+			display: block;
+		}
+
+		.woocommerce-form-login__submit {
+			display: table;
+			margin-top: 20px;
+		}
+	}
+
+	&.logged-in {
+		.entry-content {
+			& > .woocommerce {
+				display: flex;
+				flex-wrap: wrap;
+	
+				.woocommerce-MyAccount-navigation {
+					flex: 0 0 20%;
+					max-width: 20%;		
+					
+					ul {
+						list-style: none;
+						padding: 0;
+						margin: 0;
+
+						li {
+							padding-bottom: 0;
+							&:last-child {
+								a {
+									border-bottom: none;
+								}
+							}
+						}
+	
+						a {
+							display: block;
+							text-decoration: none;
+							padding: 16px;
+							border-bottom: 1px solid rgba($color__primary, 0.1);
+						}
+					}
+				}
+	
+				.woocommerce-MyAccount-content {
+					flex: 0 0 70%;
+					max-width: 70%;		
+					padding-left: 30px;		
+				}	
+				
+				.button {
+					color: #fff;
+				}
+
+			}
+		}
+	}
+
+	.woocommerce-EditAccountForm.edit-account,
+	.woocommerce-address-fields {
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"] {
+			width: 100%;
+		}
+		
+	}
+
+	fieldset {
+		border-width: 1px;
+		border-color: rgba($color__primary, 0.2);
+		border-style: solid;
+		padding: 30px;
+		margin-bottom: 30px;
+
+		input[type="password"] {
+			width: 100%;
+		}
+	}	
+}
+
+@media only screen and (max-width: 991px) {
+	.woocommerce-account {
+
+		#customer_login {
+			.col-1,
+			.col-2 {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+			
+			.col-1 + .col-2 {
+				margin-top: 30px;
+			}
+		}
+
+		&.logged-in {
+			.entry-content {
+				& > .woocommerce {
+					.woocommerce-MyAccount-navigation {
+						flex: 0 0 100%;
+						max-width: 100%;
+						
+						& + .woocommerce-MyAccount-content {
+							margin-top: 30px;
+						}
+					}
+		
+					.woocommerce-MyAccount-content {
+						flex: 0 0 100%;
+						max-width: 100%;
+						padding-left: 0;	
+					}	
+				}
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.woocommerce-account {
+
+		.woocommerce-form-login,
+		.woocommerce-form-register {
+			padding: 45px;
+		}
+
+	}
+}

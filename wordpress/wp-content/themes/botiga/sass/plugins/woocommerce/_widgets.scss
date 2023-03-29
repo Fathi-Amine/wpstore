@@ -1,0 +1,193 @@
+/**
+ * WooCommerce Price Filter
+ */
+.widget_price_filter {
+
+	.price_slider {
+		margin-bottom: 1.5em;
+	}
+
+	.price_slider_amount {
+		display: flex;
+		text-align: right;
+		line-height: 2.4;
+		justify-content: space-between;
+
+		.price_label {
+			width: 100%;
+		}
+
+		.button {
+			padding-top: 5px !important;
+			padding-bottom: 5px !important;
+		}
+	}
+
+	.ui-slider {
+		position: relative;
+		text-align: left;
+	}
+
+	.ui-slider .ui-slider-handle {
+		position: absolute;
+		z-index: 2;
+		width: 1em;
+		height: 1em;
+		cursor: ew-resize;
+		outline: none;
+		background: #fff;
+		border: 2px solid $color__primary;
+		box-sizing: border-box;
+		margin-top: -7px;
+		opacity: 1;
+		border-radius: 50%;
+
+		&:last-child {
+			margin-left: -1em;
+		}
+
+		&:hover,
+		&.ui-state-active {
+			box-shadow: 0 0 0 0.25em rgba(#000, 0.1);
+		}
+	}
+
+	.ui-slider .ui-slider-range {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		border: 0;
+		background: $color__primary;
+	}
+
+	.price_slider_wrapper .ui-widget-content {
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+	.ui-slider-horizontal {
+		height: 2px;
+	}
+
+	.ui-slider-horizontal .ui-slider-range {
+		height: 100%;
+	}
+}
+
+.widget-area,
+.widget-column {
+	.widget_products,
+	.widget_top_rated_products,
+	.widget_recently_viewed_products,
+	.widget_recent_reviews {
+		li {
+			margin-bottom: 15px;
+			a {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				margin-bottom: 10px;
+			}
+			img {
+				flex: 0 0 15%;
+				max-width: 15%;
+				margin-top: 5px;
+			}
+			.product-title {
+				flex: 0 0 85%;
+				max-width: 85%;
+				padding-left: 15px;
+			}
+			.reviewer,
+			.amount,
+			.star-rating {
+				margin-left: calc(15% + 15px);
+			}
+			ins .amount {
+				margin-left: 0 !important;
+			}
+			del,ins {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.widget_rating_filter {
+	a {
+		display: flex;
+
+		.star-rating {
+			margin-left: 0;
+		}
+	}
+}
+
+.botiga_widget_product_swatch_active_filter:empty{
+	display: none;
+}
+
+.botiga_widget_product_swatch_active_filter {
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			display: flex;
+			grid-gap: 6px;
+			align-items: center;
+
+			&:last-child {
+				justify-content: flex-end;
+
+				a {
+
+					&:hover{
+						opacity: 0.75;
+					}
+				}
+			}
+
+			strong{
+				font-size: 13px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			a:not(.botiga-clear) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				width: 16px;
+				height: 16px;
+				background-color: #e5e5e5;
+				border-radius: 100%;
+				position: relative;
+				top: -1px;
+
+				&:hover{
+					opacity: 0.75;
+				}
+
+				&:after,
+				&:before {
+			    content: "";
+			    display: block;
+			    position: absolute;
+			    width: 8px;
+			    height: 1px;
+			    background-color: currentColor;
+			    transform: rotate(45deg);
+			    border-radius: 5px;
+				}
+
+				&:after {
+			    transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

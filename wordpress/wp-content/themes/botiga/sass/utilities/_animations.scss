@@ -1,0 +1,115 @@
+/* Rotate */
+@keyframes botigaAnimRotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.botigaAnimRotate {
+    animation-name: botigaAnimRotate;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+}
+
+/* Fade In Short */
+@keyframes botigaFadeInShort {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.botigaFadeInShort {
+    animation-name: botigaFadeInShort;
+}
+
+/* Fade In Up Shorter */
+@keyframes fadeInUpShorter {
+    from {
+        opacity: 0;
+        transform: translate(0,20px)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInUpShorter {
+    animation-name: fadeInUpShorter
+}
+
+/* Fade In Right Shorter */
+@keyframes fadeInRightShorter {
+    from {
+        opacity: 0;
+        transform: translate(-20px,0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInRightShorter {
+    animation-name: fadeInRightShorter
+}
+
+/* Fade In Left Shorter */
+@keyframes fadeInLeftShorter {
+    from {
+        opacity: 0;
+        transform: translate(20px,0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInLeftShorter {
+    animation-name: fadeInLeftShorter
+}
+
+/* Fade In Down Shorter */
+@keyframes fadeInDownShorter {
+    from {
+        opacity: 0;
+        transform: translate(0,-20px)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInDownShorter {
+    animation-name: fadeInDownShorter
+}
+
+.botiga-animated {
+    opacity: 0;
+}
+
+.botiga-anim-infinite {
+    animation-iteration-count: infinite;
+}
+
+.botiga-anim-fowards {
+    animation-fill-mode: forwards;
+}
+
+.botiga-anim-timing-linear {
+    animation-timing-function: linear;
+}
+
+.botiga-anim-duration-300ms {
+    animation-duration: 600ms;
+}

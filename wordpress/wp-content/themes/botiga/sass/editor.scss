@@ -1,0 +1,182 @@
+/*
+* Import variables
+*/
+@import "abstracts/abstracts";
+
+/*
+* General
+*/
+.block-editor-block-list__block {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+@media (min-width: 1600px) {
+	.wp-block {
+		max-width: 1000px;
+	}
+}
+
+.wp-block[data-align="full"] {
+	.wp-block {
+		max-width: none;
+	}
+}
+
+.botiga-block-no-preview {
+    padding: 25px;
+    border: 1px solid #CCC;
+    border-left-color: #6c6c6c;
+    border-left-width: 3px;
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*
+* Spacing
+*/
+div.editor-styles-wrapper {
+	@import "utilities/spacing";
+}
+
+/*
+* Typography
+*/
+div.editor-styles-wrapper {
+	@import "base/typography/typography";
+
+	.editor-post-title .editor-post-title__input {
+		@include font-size(32);
+    	margin: 0 0 12px;
+		font-weight: 600;
+		text-align: center;
+	}
+}
+
+/*
+* Elements
+*/
+div.editor-styles-wrapper {
+
+	button:not(.components-button),
+	a.button,
+	.wp-block-button__link,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		border: 2px solid $color__primary;
+		box-shadow: none;
+		background: $color__primary;
+		color: #fff;
+		padding: 13px 24px;
+		cursor: pointer;
+		display: inline-block;
+		transition: all 0.3s;
+		border-radius: 0;
+		height: auto;
+		border-radius: 0;
+		font-weight: 400;
+		@include font-size(14);
+	
+		&:hover {
+			color: #fff;
+			background-color: $color__hover;
+			border-color: $color__hover;
+		}
+	
+		&:active,
+		&:focus {
+			color: #fff;
+		}
+	}
+	a.wc-backward {
+		color: #fff;
+	}
+	.is-style-outline .wp-block-button__link,
+	.wp-block-button__link.is-style-outline {
+		color: $color__primary;
+		border: 2px solid $color__primary;
+	}
+	.wp-block-button {
+		margin-bottom: 20px;
+	}
+	.wp-block-button.is-style-squared, 
+	.wp-block-button__link.wp-block-button.is-style-squared {
+		a {
+			border-radius: 0;
+		}
+	}
+
+	@import "base/elements/links";
+
+	.wp-block-freeform.block-library-rich-text__tinymce a {
+		color: $color__primary;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__hover;
+		}		
+	}
+	@import "base/elements/lists";
+	@import "base/elements/tables";
+}
+
+/*
+* Woocommerce
+*/ 
+// WooCommerce color variables
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3d9cd2;
+
+div.editor-styles-wrapper {
+
+	@import "plugins/woocommerce/components";
+	@import "plugins/woocommerce/products";
+	@import "plugins/woocommerce/quick-view";
+
+}
+
+/*
+* Widget blocks
+*/
+.wp-block[data-type="core/widget-area"] {
+	max-width: 340px;
+
+	h3 {
+		margin: 0 0 20px;
+		@include font-size(18);		
+	}
+}
+div.editor-styles-wrapper {
+	@import "components/widgets/widget_blocks";
+}
+
+/*
+* Pagination
+*/
+div.editor-styles-wrapper {
+	@import "components/navigation/navigation";
+}
+
+/*
+* Custom Control Components
+*/
+.botiga-dimensions-control {
+	> div {
+		max-width: 100%;
+	}
+}
+
+.botiga-inspector-tabs-content-wrapper {
+	.components-base-control__label,
+	.components-input-control__label {
+		text-transform: none !important;
+		font-weight: 400 !important;
+		font-size: inherit !important;
+	}
+}
